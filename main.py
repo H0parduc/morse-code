@@ -37,8 +37,6 @@ def play_message_to_sound(message):
     audio = gTTS(text=message, lang=language, slow=False)
     audio.save(audio_path)
 
-
-
     if os.name == 'nt':  # Check if the operating system is Windows
         os.system(f"start {audio_path}")
     elif os.name == 'posix':  # Check if the operating system is Linux or macOS
